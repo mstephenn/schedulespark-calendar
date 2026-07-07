@@ -1,0 +1,359 @@
+.playground {
+  display: grid;
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  .playground {
+    padding: 24px;
+  }
+}
+
+.playground__header h1 {
+  font-size: 1.5rem;
+  margin: 0 0 4px;
+}
+
+.playground__header p {
+  color: #64748b;
+  margin: 0;
+}
+
+.playground__header-link {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.playground__header-link:hover {
+  text-decoration: underline;
+}
+
+.playground__header code {
+  background: #eef2ff;
+  border-radius: 4px;
+  color: #4338ca;
+  font-size: 0.875em;
+  padding: 1px 6px;
+}
+
+.playground__guide {
+  background: #ffffff;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.playground__guide-intro h2 {
+  font-size: 1.125rem;
+  margin: 0 0 6px;
+}
+
+.playground__guide-intro p {
+  color: #64748b;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.playground__guide-intro code {
+  background: #f1f5f9;
+  border-radius: 4px;
+  font-size: 0.8125em;
+  padding: 1px 4px;
+}
+
+.playground__guide-sections {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.playground__guide-section {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.playground__guide-summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  list-style: none;
+  padding: 10px 12px;
+}
+
+.playground__guide-summary::-webkit-details-marker {
+  display: none;
+}
+
+.playground__guide-summary::before {
+  color: #6366f1;
+  content: "▸ ";
+}
+
+.playground__guide-section[open] .playground__guide-summary::before {
+  content: "▾ ";
+}
+
+.playground__guide-body {
+  border-top: 1px solid #e2e8f0;
+  padding: 0 12px 12px;
+}
+
+.playground__guide-try {
+  color: #475569;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  margin: 10px 0 8px;
+}
+
+.playground__guide-label {
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+
+.playground__guide-code {
+  background: #0f172a;
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-size: 0.6875rem;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 100%;
+  overflow: auto;
+  padding: 10px 12px;
+  white-space: pre;
+}
+
+.playground__guide-footer {
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 0.8125rem;
+  margin: 14px 0 0;
+  padding-top: 12px;
+}
+
+.playground__guide-footer a {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.playground__guide-footer a:hover {
+  text-decoration: underline;
+}
+
+.playground__toolbar {
+  background: #ffffff;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  padding: 12px 16px;
+}
+
+.playground__field {
+  display: grid;
+  gap: 4px;
+}
+
+.playground__field label {
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.playground__field input,
+.playground__field select {
+  border: 1px solid #d8dee8;
+  border-radius: 6px;
+  font: inherit;
+  min-width: 120px;
+  padding: 6px 8px;
+}
+
+.playground__field--checkbox {
+  align-items: end;
+  display: flex;
+  gap: 8px;
+}
+
+.playground__field--checkbox label {
+  text-transform: none;
+}
+
+.playground__view-group {
+  background: #f1f5f9;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  display: inline-flex;
+  padding: 2px;
+}
+
+.playground__view-button {
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #475569;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.playground__view-button:hover {
+  color: #0f172a;
+}
+
+.playground__view-button--active,
+.playground__view-button--active:hover {
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 10%);
+  color: #11735f;
+}
+
+.playground__calendar {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.playground__log {
+  background: #ffffff;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.playground__log h2 {
+  font-size: 0.875rem;
+  margin: 0 0 8px;
+}
+
+.playground__log pre {
+  background: #f8fafc;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  margin: 0;
+  max-height: 160px;
+  overflow: auto;
+  padding: 8px;
+  white-space: pre-wrap;
+}
+
+.playground__colors {
+  background: #ffffff;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.playground__colors h2 {
+  font-size: 0.875rem;
+  margin: 0 0 4px;
+}
+
+.playground__colors-help {
+  color: #64748b;
+  font-size: 0.8125rem;
+  margin: 0 0 12px;
+}
+
+.playground__color-list {
+  display: grid;
+  gap: 10px;
+}
+
+.playground__color-row {
+  align-items: center;
+  display: grid;
+  gap: 8px 12px;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.playground__color-row .playground__swatches {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 640px) {
+  .playground__color-row .playground__swatches {
+    grid-column: auto;
+  }
+}
+
+@media (min-width: 640px) {
+  .playground__color-row {
+    grid-template-columns: minmax(140px, 1fr) auto 1fr auto;
+  }
+}
+
+.playground__color-row-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.playground__color-picker input {
+  block-size: 32px;
+  inline-size: 48px;
+  padding: 0;
+}
+
+.playground__default-color {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.playground__swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.playground__swatch {
+  block-size: 24px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  inline-size: 24px;
+  padding: 0;
+}
+
+.playground__swatch--active {
+  border-color: #0f172a;
+}
+
+.playground__color-clear {
+  background: #ffffff;
+  border: 1px solid #d8dee8;
+  border-radius: 6px;
+  color: #64748b;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.75rem;
+  padding: 6px 10px;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
